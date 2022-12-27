@@ -141,7 +141,7 @@ spec:
           serviceAccount: cronjob-backup-service-account
           containers:
           - name: kubectl
-            image: misolucoestech/cloud-custodian-aws:latest
+            image: arturcorreiajunior/cloud-custodian-aws:latest
             command:
             - /bin/sh
             - -c
