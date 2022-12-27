@@ -147,9 +147,9 @@ spec:
             - -c
             - >-
               aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID && aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY && aws configure set default.region $AWS_DEFAULT_REGION;
-              custodian run --output-dir ouput --region us-east-2 -s s3://cloud-custodian-prudentte  policies.yaml;
-              custodian report --output-dir ouput --region us-east-2 -s s3://cloud-custodian-prudentte policies.yaml;
-              aws s3 cp s3://cloud-custodian-prudentte/ policies --recursive; 
+              custodian run --output-dir ouput --region us-east-2 -s s3://cloud-custodian-bucket  policies.yaml;
+              custodian report --output-dir ouput --region us-east-2 -s s3://cloud-custodian-bucket policies.yaml;
+              aws s3 cp s3://cloud-custodian-bucket/ policies --recursive; 
               echo '--------------------------------------------------------------------------------------------------------';
               python3 python.py;
             env:
